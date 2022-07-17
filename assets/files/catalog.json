@@ -1,0 +1,100 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "iPhone 12 Pro",
+            "desc": "Apple iPhone 12th Generation",
+            "price": 999,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 2,
+            "name": "Pixel 5",
+            "desc": "Google Pixel Phone 5th Generation",
+            "price": 699,
+            "color": "#00ac51",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 3,
+            "name": "M1 Macbook Air",
+            "desc": "Apple Macbook Air with Apple silicon",
+            "price": 1099,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 4,
+            "name": "PlayStation 5",
+            "desc": "Sony PlayStation 5th Generation",
+            "price": 549,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 5,
+            "name": "iPhone 12",
+            "desc": "Apple iPhone 12th Generation",
+            "price": 895,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 6,
+            "name": "Galaxy M01S",
+            "desc": "Samsung Galaxy M series",
+            "price": 450,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 7,
+            "name": "Galaxy A10",
+            "desc": "Samsung Galaxy A series",
+            "price": 399,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 8,
+            "name": "iPhone 6",
+            "desc": "Apple iPhone 6th Generation",
+            "price": 449,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 9,
+            "name": "Airpods Pro",
+            "desc": "Apple Airpods Pro 1st Generation",
+            "price": 200,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 10,
+            "name": "iPad Pro",
+            "desc": "Apple iPad pro 2020 edition",
+            "price": 799,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        },
+        {
+            "id": 11,
+            "name": "Galaxy S21 Ultra",
+            "desc": "Samsung Galaxy S21 Ultra 2021 edition",
+            "price": 1299,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Galaxy S21",
+            "desc": "Samsung Galaxy S21 2021 edition",
+            "price": 899,
+            "color": "#33505a",
+            "image": "assets/images/profile.jpg" 
+        }
+    ]
+}
