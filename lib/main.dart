@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp( 
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
-      // debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
         "/" : (context) => HomePage(),

@@ -6,7 +6,7 @@
             "desc": "Apple iPhone 12th Generation",
             "price": 999,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin1.jpg" 
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "desc": "Google Pixel Phone 5th Generation",
             "price": 699,
             "color": "#00ac51",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin2.jpg" 
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "desc": "Apple Macbook Air with Apple silicon",
             "price": 1099,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin3.jpg" 
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "desc": "Sony PlayStation 5th Generation",
             "price": 549,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin4.jpg" 
         },
         {
             "id": 5,
@@ -38,7 +38,7 @@
             "desc": "Apple iPhone 12th Generation",
             "price": 895,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin5.jpg" 
         },
         {
             "id": 6,
@@ -46,7 +46,7 @@
             "desc": "Samsung Galaxy M series",
             "price": 450,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin6.jpg" 
         },
         {
             "id": 7,
@@ -54,7 +54,7 @@
             "desc": "Samsung Galaxy A series",
             "price": 399,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin7.jpg" 
         },
         {
             "id": 8,
@@ -62,7 +62,7 @@
             "desc": "Apple iPhone 6th Generation",
             "price": 449,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin8.jpg" 
         },
         {
             "id": 9,
@@ -70,7 +70,7 @@
             "desc": "Apple Airpods Pro 1st Generation",
             "price": 200,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin9.jpg" 
         },
         {
             "id": 10,
@@ -78,7 +78,7 @@
             "desc": "Apple iPad pro 2020 edition",
             "price": 799,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin10.jpg" 
         },
         {
             "id": 11,
@@ -86,7 +86,7 @@
             "desc": "Samsung Galaxy S21 Ultra 2021 edition",
             "price": 1299,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg"
+            "image": "assets/images/pin11.jpg"
         },
         {
             "id": 12,
@@ -94,7 +94,7 @@
             "desc": "Samsung Galaxy S21 2021 edition",
             "price": 899,
             "color": "#33505a",
-            "image": "assets/images/profile.jpg" 
+            "image": "assets/images/pin12.png" 
         }
     ]
 }
