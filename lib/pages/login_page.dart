@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/routes.dart';
+import 'package:flutter_application_1/widgets/themes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -35,7 +36,8 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-        title: Text("Catalog",style: TextStyle(color: Colors.black),),
+        backgroundColor: Colors.deepPurpleAccent,
+        title: Text("Catalog",),
       ),
         body: SingleChildScrollView(
           child: Column(
@@ -103,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                 
                     Material(
                       borderRadius: changeButton? BorderRadius.circular(25) : BorderRadius.circular(8),
-                      color: Colors.deepPurpleAccent,
+                      color: MyTheme.darkBluishColor,
                       child: InkWell(
                         splashColor: Colors.deepPurple,
                         onTap: () => moveToHome(context),
@@ -129,6 +131,7 @@ class _LoginPageState extends State<LoginPage> {
               )
           ],
               ),
-        ));
+        )
+        );
   }
 }
