@@ -11,7 +11,12 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      
+      appBar: AppBar(
+      backgroundColor: Colors.transparent,
+      elevation: 0.0,
+
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -19,15 +24,15 @@ class HomeDetailPage extends StatelessWidget {
           alignment: MainAxisAlignment.spaceBetween,
                 buttonPadding:EdgeInsets.zero,
                 children: [
-                  "\$${catalog.price}".text.color(MyTheme.darkBluishColor).bold.xl4.make(),
+                  "\$${catalog.price}".text.green800.bold.xl4.make(),
                   ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
                       shape: MaterialStateProperty.all(StadiumBorder())
                     ),
-                    child: "Buy".text.make()
-                    ).wh(100, 40)
+                    child: "Add to cart".text.make()
+                    ).wh(120, 40)
                 ],
         ).p32(),
       ),
@@ -47,15 +52,18 @@ class HomeDetailPage extends StatelessWidget {
                 child: Container(
                   color: Colors.white,
                     width: context.screenWidth,
-                  child: Column(
-                    crossAxisAlignment : CrossAxisAlignment.center,
-                    mainAxisAlignment : MainAxisAlignment.start,
-                    children: [
-                      catalog.name.text.xl3.color(MyTheme.darkBluishColor).bold.make(),
-                      catalog.desc.text.textStyle(context.captionStyle).xl.make(),
-                      10.heightBox,
-                    ],
-                  ).py64(),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment : CrossAxisAlignment.center,
+                      mainAxisAlignment : MainAxisAlignment.start,
+                      children: [
+                        catalog.name.text.xl3.color(MyTheme.darkBluishColor).bold.make(),
+                        catalog.desc.text.textStyle(context.captionStyle).xl.make(),
+                        10.heightBox,
+                        "I my nothing scarce when entrance dreaming of never was, lattice of door dreaming murmured door, gaunt soul betook press i. Visiter it before cushioned uncertain the grim, dreaming fowl opened i ah dying bust gently nodded seat. Smiling memories maiden a is grew. Peering door tapping the memories raven.".text.textStyle(context.captionStyle).make().p16()
+                      ],
+                    ).py64(),
+                  ),
                 ),
               )
               )
