@@ -55,18 +55,19 @@ class _HomePageState extends State<HomePage> {
     final _cart = (VxState.store as MyStore).cart;
 
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndTop,
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
       floatingActionButton: VxBuilder(
         mutations: {AddMutation,RemoveMutation},
-        builder: (context,_)=> 
+        builder: (context,store,_)=> 
         FloatingActionButton(
           
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
           backgroundColor: context.theme.buttonColor,
           child: Icon(CupertinoIcons.cart),
-        ).badge(color: context.theme.textSelectionColor,size:20,count: _cart.items.length,textStyle: TextStyle(
+        ).badge(color: context.theme.textSelectionColor,size: 20,count: _cart.items.length,textStyle: TextStyle(
           color: context.theme.buttonColor,
-          fontWeight: FontWeight.bold
+          fontWeight: FontWeight.bold,
+          fontSize: 11,
         ))
         
       ),
@@ -87,7 +88,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               CatalogHeader(),
               if(CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-                CatalogList().py16().expand()
+                CatalogList().py20().expand()
                 else CircularProgressIndicator().centered().expand(),
             ],
           ),

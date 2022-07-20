@@ -75,7 +75,7 @@ class CatalogItem extends StatelessWidget {
                 mainAxisAlignment : MainAxisAlignment.center,
               children: [
                 catalog.name.text.lg.color(context.theme.buttonColor).bold.make(),
-                catalog.desc.text.textStyle(context.captionStyle).make(),
+                catalog.desc.text.textStyle(Theme.of(context).textTheme.caption!).sm.make(),
                 10.heightBox,
                 ButtonBar(
                   alignment: MainAxisAlignment.spaceBetween,
@@ -92,7 +92,7 @@ class CatalogItem extends StatelessWidget {
           )
         ],
       )
-    ).color(context.canvasColor).rounded.square(120).make().py16();
+    ).color(context.canvasColor).rounded.square(120).make().py12();
   }
 }
 

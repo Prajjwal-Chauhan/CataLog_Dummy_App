@@ -53,9 +53,9 @@ class HomeDetailPage extends StatelessWidget {
                       mainAxisAlignment : MainAxisAlignment.start,
                       children: [
                         catalog.name.text.xl3.color(context.theme.buttonColor).bold.make(),
-                        catalog.desc.text.textStyle(context.captionStyle).xl.make(),
+                        catalog.desc.text.textStyle(Theme.of(context).textTheme.caption!).xl.make(),
                         10.heightBox,
-                        "I my nothing scarce when entrance dreaming of never was, lattice of door dreaming murmured door, gaunt soul betook press i. Visiter it before cushioned uncertain the grim, dreaming fowl opened i ah dying bust gently nodded seat. Smiling memories maiden a is grew. Peering door tapping the memories raven.".text.textStyle(context.captionStyle).make().p16()
+                        "I my nothing scarce when entrance dreaming of never was, lattice of door dreaming murmured door, gaunt soul betook press i. Visiter it before cushioned uncertain the grim, dreaming fowl opened i ah dying bust gently nodded seat. Smiling memories maiden a is grew. Peering door tapping the memories raven.".text.textStyle(Theme.of(context).textTheme.caption!).make().p16()
                       ],
                     ).py64(),
                   ),
