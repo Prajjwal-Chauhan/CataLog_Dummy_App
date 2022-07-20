@@ -16,7 +16,7 @@ class CartPage extends StatelessWidget {
         // leading: Icon(CupertinoIcons.cart),
         title: Text("Cart",style: TextStyle(color: MyTheme.creamColor)),
         iconTheme: IconThemeData(color: MyTheme.creamColor),
-        backgroundColor: MyTheme.darkBluishColor,
+        backgroundColor: context.theme.bottomAppBarColor,
         // backgroundColor: Colors.transparent,
         // elevation: 0.0,
       ),
@@ -24,7 +24,7 @@ class CartPage extends StatelessWidget {
       body: Column(
         children: [
           _CartList().p32().expand(),
-          Divider(),
+          // Divider(),
           _CartTotal()
         ],
       ),
@@ -61,10 +61,10 @@ class _CartTotal extends StatelessWidget {
               content: "Buying not supported yet...".text.make(),));
           }, 
           style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
-                        shape: MaterialStateProperty.all(StadiumBorder())
+                        backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
+                        // shape: MaterialStateProperty.all(StadiumBorder())
                       ),
-          child: "Buy".text.color(MyTheme.creamColor).make()).w24(context)
+          child: "Buy".text.color(context.theme.textSelectionColor).make()).w24(context)
         ]
       ),
     );
@@ -82,14 +82,14 @@ class _CartList extends StatelessWidget {
       itemCount: _cart.items.length,
       itemBuilder: (context,index) =>
     ListTile(
-      leading: Icon(Icons.done),
+      leading: Icon(Icons.done).iconColor(context.accentColor),
       trailing: IconButton(
-        icon: Icon(Icons.remove_circle_outline),
+        icon: Icon(Icons.remove_circle_outline).iconColor(context.accentColor),
         onPressed: () {
           RemoveMutation(_cart.items[index]);
         },
         ),
-        title: _cart.items[index].name.text.sm.make(),
+        title: _cart.items[index].name.text.color(context.accentColor).make(),
     )
     );
   }

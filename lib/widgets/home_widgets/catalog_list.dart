@@ -15,7 +15,27 @@ class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     shrinkWrap: true;
-    return ListView.builder(
+    return 
+    // Vx.isWeb?
+    // GridView.builder(
+    //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+    //   itemBuilder: (context, index) {
+    //     final catalog = CatalogModel.items[index];
+    //   return InkWell(
+    //     onTap: () => Navigator.push(
+    //       context,MaterialPageRoute(
+    //         builder: (context) => HomeDetailPage(
+    //           catalog: catalog),
+    //           ),
+    //         ),
+    //     child: CatalogItem(catalog: catalog),
+    //     );
+    // },
+    // itemCount: CatalogModel.items.length,
+    // )
+    
+    // :
+    ListView.builder(
       itemBuilder: (context, index) {
         final catalog = CatalogModel.items[index];
       return InkWell(
@@ -54,14 +74,14 @@ class CatalogItem extends StatelessWidget {
                 crossAxisAlignment : CrossAxisAlignment.start,
                 mainAxisAlignment : MainAxisAlignment.center,
               children: [
-                catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
+                catalog.name.text.lg.color(context.theme.buttonColor).bold.make(),
                 catalog.desc.text.textStyle(context.captionStyle).make(),
                 10.heightBox,
                 ButtonBar(
                   alignment: MainAxisAlignment.spaceBetween,
                   buttonPadding:EdgeInsets.zero,
                   children: [
-                    "\$${catalog.price}".text.color(MyTheme.darkBluishColor).bold.xl.make(),
+                    "\$${catalog.price}".text.color(context.theme.buttonColor).bold.xl.make(),
                     AddToCart(catalog: catalog)
                   ],
                 ).pOnly(right: 10.0)
@@ -72,7 +92,7 @@ class CatalogItem extends StatelessWidget {
           )
         ],
       )
-    ).white.rounded.square(120).make().py16();
+    ).color(context.canvasColor).rounded.square(120).make().py16();
   }
 }
 

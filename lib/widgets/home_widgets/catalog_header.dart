@@ -14,8 +14,8 @@ class CatalogHeader extends StatelessWidget {
             
             children: [
               Padding(padding: EdgeInsets.zero),
-              "Catalog App".text.xl4.bold.color(MyTheme.darkBluishColor).make(),
-              "Chalega to chaand tak !!".text.xl2.make(),
+              "Catalog App".text.xl4.bold.color(context.theme.buttonColor).make(),
+              "Chalega to chaand tak !!".text.xl2.color(context.accentColor).make(),
             ],
           );
   }

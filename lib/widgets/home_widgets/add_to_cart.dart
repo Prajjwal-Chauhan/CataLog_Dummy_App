@@ -31,13 +31,13 @@ class AddToCart extends StatelessWidget {
         }
       },
       style: isInCart?ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.green[800]),
+        backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
         shape: MaterialStateProperty.all(StadiumBorder())
       ):ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
+        backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
         shape: MaterialStateProperty.all(StadiumBorder())
       ),
-      child: isInCart?Icon(Icons.done):Icon(CupertinoIcons.cart_badge_plus)
+      child: isInCart?Icon(Icons.done).iconColor(context.theme.textSelectionColor):Icon(CupertinoIcons.cart_badge_plus).iconColor(context.theme.textSelectionColor)
       );
   }
 }

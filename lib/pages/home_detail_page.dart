@@ -15,12 +15,13 @@ class HomeDetailPage extends StatelessWidget {
       
       appBar: AppBar(
       backgroundColor: Colors.transparent,
+      iconTheme: IconThemeData(color: context.accentColor),
       elevation: 0.0,
 
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.cardColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.canvasColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
                 buttonPadding:EdgeInsets.zero,
@@ -44,14 +45,14 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.white,
+                  color: context.canvasColor,
                     width: context.screenWidth,
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment : CrossAxisAlignment.center,
                       mainAxisAlignment : MainAxisAlignment.start,
                       children: [
-                        catalog.name.text.xl3.color(MyTheme.darkBluishColor).bold.make(),
+                        catalog.name.text.xl3.color(context.theme.buttonColor).bold.make(),
                         catalog.desc.text.textStyle(context.captionStyle).xl.make(),
                         10.heightBox,
                         "I my nothing scarce when entrance dreaming of never was, lattice of door dreaming murmured door, gaunt soul betook press i. Visiter it before cushioned uncertain the grim, dreaming fowl opened i ah dying bust gently nodded seat. Smiling memories maiden a is grew. Peering door tapping the memories raven.".text.textStyle(context.captionStyle).make().p16()

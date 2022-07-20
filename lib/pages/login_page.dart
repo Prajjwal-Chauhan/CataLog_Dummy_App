@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -34,10 +35,12 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+      backgroundColor: context.theme.shadowColor,
         appBar: AppBar(
-        backgroundColor: Colors.deepPurpleAccent,
-        title: Text("Catalog",),
+          leading: Icon(Icons.login_outlined),
+        backgroundColor: context.theme.bottomAppBarColor,
+        iconTheme: IconThemeData(color: MyTheme.creamColor),
+        title: Text("Catalog App",style:TextStyle(color: MyTheme.creamColor)),
       ),
         body: SingleChildScrollView(
           child: Column(
@@ -52,8 +55,8 @@ class _LoginPageState extends State<LoginPage> {
               Text(
                 "Welcome $name",
                 style: TextStyle(
-                  fontSize: 28,
-                  color: Colors.deepPurpleAccent,
+                  fontSize: 24,
+                  color: context.theme.accentColor,
                   fontWeight: FontWeight.bold,
         
                 ),
@@ -75,6 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                       validator: (value){
                         if (value!.isEmpty) {
                           return"Username cannot be empty";
+                        }
+
+                        else if (value.length > 12) {
+                          return"Username cannot be greater than 12";
                         }
                         return null;
                       },
@@ -105,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                 
                     Material(
                       borderRadius: changeButton? BorderRadius.circular(25) : BorderRadius.circular(8),
-                      color: MyTheme.darkBluishColor,
+                      color: context.theme.buttonColor,
                       child: InkWell(
                         splashColor: Colors.deepPurple,
                         onTap: () => moveToHome(context),
@@ -114,9 +121,9 @@ class _LoginPageState extends State<LoginPage> {
                           width: changeButton?50 : 450,
                           height: 50,   
                           alignment: Alignment.center,
-                          child:changeButton?Icon(Icons.done,color : Colors.white) : Text("Login",
+                          child:changeButton?Icon(Icons.done,color : context.theme.textSelectionColor) : Text("Login",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: context.theme.textSelectionColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 18
                             )
