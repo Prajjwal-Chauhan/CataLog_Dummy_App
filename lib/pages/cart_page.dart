@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/store.dart';
 import 'package:flutter_application_1/models/cart.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -34,7 +35,8 @@ class CartPage extends StatelessWidget {
 
 class _CartTotal extends StatelessWidget {
 
-  final _cart = CartModel();
+  // final _cart = CartModel();
+  final CartModel _cart = (VxState.store as MyStore).cart;
   // const _CartTotal({Key? key}) : super(key: key);
 
   @override
@@ -44,7 +46,14 @@ class _CartTotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-        "\$${_cart.totalPrice}".text.xl3.green800.make(),
+        VxConsumer(
+          mutations: {RemoveMutation}, 
+          notifications: {},
+          builder: (context,_){
+            return "\$${_cart.totalPrice}".text.xl3.green800.make();
+        },
+        ),
+        
         30.widthBox,
         ElevatedButton(
           onPressed: () {
@@ -63,18 +72,12 @@ class _CartTotal extends StatelessWidget {
 }
 
 
-class _CartList extends StatefulWidget {
-  const _CartList({Key? key}) : super(key: key);
+class _CartList extends StatelessWidget {
 
-  @override
-  State<_CartList> createState() => __CartListState();
-}
-
-class __CartListState extends State<_CartList> {
-
-  final _cart = CartModel();
+  final CartModel _cart = (VxState.store as MyStore).cart;
   @override
   Widget build(BuildContext context) {
+    VxState.listen(context,to: [RemoveMutation]);
     return _cart.items.isEmpty?"Nothing to show".text.xl3.makeCentered(): ListView.builder(
       itemCount: _cart.items.length,
       itemBuilder: (context,index) =>
@@ -83,8 +86,7 @@ class __CartListState extends State<_CartList> {
       trailing: IconButton(
         icon: Icon(Icons.remove_circle_outline),
         onPressed: () {
-          _cart.remove(_cart.items[index]);
-          setState(() {});
+          RemoveMutation(_cart.items[index]);
         },
         ),
         title: _cart.items[index].name.text.sm.make(),
